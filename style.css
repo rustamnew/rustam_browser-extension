@@ -49,15 +49,16 @@ button {
     flex-shrink: 0;
 }
 
-.field {
+.form {
     width: 100%;
     padding: 0.5rem;
     display: flex;
     align-items: center;
 }
 
-.submit {
+.submit-button {
     display: flex;
     align-items: center;
+    margin-left: 0.5rem;
 }
 
