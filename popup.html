@@ -9,7 +9,7 @@
 
     <body style="width: 500px;">
 
-        <h1>Marketplace Search</h1>
+        <h1>Поиск по маркетплейсам</h1>
 
         <div class="list">
             <div class="item">
@@ -19,10 +19,15 @@
                     </a>
                 </div>
 
-                <div class="form">
+                <form class="form single"
+                    data-href="https://www.ozon.ru" 
+                    data-base="/search/?from_global=true&text=" 
+                    data-divider="%20" 
+                    data-market="ozon">
+
                     <input type="text" class="input search-input" data-marketplace="ozon" placeholder="Поисковый запрос">
-                    <button class="button submit-button" href="https://www.ozon.ru" data-marketplace="ozon">GO!</button>
-                </div>
+                    <button type="submit" class="button submit-button">GO!</button>
+                </form>
             </div>
             
             <div class="item">
@@ -32,10 +37,15 @@
                     </a>
                 </div>
 
-                <div class="form">
-                    <input type="text" class="input search-input" data-marketplace="wb" placeholder="Поисковый запрос">
-                    <button class="button submit-button" href="https://www.wildberries.ru" data-marketplace="wb">GO!</button>
-                </div>
+                <form class="form single"
+                    data-href="https://www.wildberries.ru" 
+                    data-base="/catalog/0/search.aspx?search=" 
+                    data-divider="%20" 
+                    data-market="wb">
+
+                    <input type="text" class="input search-input" placeholder="Поисковый запрос">
+                    <button type="submit" class="button submit-button">GO!</button>
+                </form>
             </div>
 
             <div class="item">
@@ -45,12 +55,42 @@
                     </a>
                 </div>
 
-                <div class="form">
-                    <input type="text" class="input search-input" data-marketplace="ym" placeholder="Поисковый запрос">
-                    <button class="button submit-button" href="https://market.yandex.ru" data-marketplace="ym">GO!</button>
+                <form class="form single"
+                    data-href="https://market.yandex.ru" 
+                    data-base="/search?text=" 
+                    data-divider="+" 
+                    data-market="ym">
+
+                    <input type="text" class="input search-input" placeholder="Поисковый запрос">
+                    <button type="submit" class="button submit-button">GO!</button>
+                </form>
+            </div>
+
+            <div class="item">
+                <div class="icon">
+                    <a href="https://megamarket.ru" target="_blank">
+                        <img src="./images/megamarket.png" alt="megamarket">
+                    </a>
                 </div>
+
+                <form class="form single"
+                    data-href="https://megamarket.ru" 
+                    data-base="/catalog/?q=" 
+                    data-divider="%20" 
+                    data-market="megamarket">
+
+                    <input type="text" class="input search-input" id="allsearch" placeholder="Поисковый запрос">
+                    <button type="submit" class="button submit-button">GO!</button>
+                </form>
             </div>
         </div>
+
+        <h2>Искать по всем:</h2>
+
+        <form class="form global">
+            <input type="text" class="input" placeholder="Поисковый запрос">
+            <button class="button submit-button">GO!</button>
+        </form>
 
         <script src="./script.js"></script>
     </body>
