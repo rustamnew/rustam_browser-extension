@@ -50,8 +50,8 @@ formGlobal.addEventListener('submit', async (e) => {
 
 // Очистка форм
 const clearButton = document.querySelector('#button-clear')
-clearButton.addEventListener('click', (e) => {
-    clearForms()
+clearButton.addEventListener('click', async (e) => {
+    await clearForms()
 })
 
 
@@ -126,10 +126,12 @@ async function loadInputStates() {
     })
 }
 
-function clearForms() {
+async function clearForms() {
     forms.forEach( (form) => {
         form.querySelector('input').value = ''
     })
 
     formGlobal.querySelector('input').value = ''
+
+    await saveInputStates()
 }
