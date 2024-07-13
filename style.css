@@ -29,13 +29,21 @@ button {
     justify-content: center;
     cursor: pointer;
 
-    width: 2rem;
-    height: 2rem;
+    height: 1.3rem;
+    border-radius: 0.3rem;
 
     background: #F5871F;
     color: #ffffff;
+}
 
+.button.circle {
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
+}
+
+body > button {
+    margin-bottom: 0.5rem;
 }
 
 .list {

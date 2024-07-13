@@ -48,6 +48,14 @@ formGlobal.addEventListener('submit', async (e) => {
 
 
 
+// Очистка форм
+const clearButton = document.querySelector('#button-clear')
+clearButton.addEventListener('click', (e) => {
+    clearForms()
+})
+
+
+
 // Составить URL с запросом поиска из элемента <form>
 function getPageFromForm(form) {
     const formValue = form.querySelector(`input`).value
@@ -116,4 +124,12 @@ async function loadInputStates() {
     inputs.forEach((input, index) => {
         input.value = values.values[index]
     })
+}
+
+function clearForms() {
+    forms.forEach( (form) => {
+        form.querySelector('input').value = ''
+    })
+
+    formGlobal.querySelector('input').value = ''
 }
