@@ -9,91 +9,26 @@
 
     <body style="width: 500px;">
 
-        <h1>Поиск по маркетплейсам</h1>
+        <div class="progress-bar" role="progressbar" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100"></div>
 
-        <button class="button" id="button-clear">Очистить</button>
+        <h1>План по часам</h1>
 
-        <div class="list">
+        <button class="button" id="buttonAdd">Добавить</button>
+        <button class="button" id="buttonTotal">Итог</button>
+
+        <div class="list" id="tasks">
             <div class="item">
                 <div class="icon">
                     <a href="https://www.ozon.ru" target="_blank">
                         <img src="./images/ozon.png" alt="ozon">
                     </a>
                 </div>
-
-                <form class="form single"
-                    data-href="https://www.ozon.ru" 
-                    data-base="/search/?from_global=true&text=" 
-                    data-divider="%20" 
-                    data-market="ozon">
-
-                    <input type="text" class="input search-input" data-marketplace="ozon" placeholder="Поисковый запрос">
-                    <button type="submit" class="button circle submit-button">GO!</button>
-                </form>
-            </div>
-            
-            <div class="item">
-                <div class="icon">
-                    <a href="https://www.wildberries.ru" target="_blank">
-                        <img src="./images/wb.png" alt="wb">
-                    </a>
-                </div>
-
-                <form class="form single"
-                    data-href="https://www.wildberries.ru" 
-                    data-base="/catalog/0/search.aspx?search=" 
-                    data-divider="%20" 
-                    data-market="wb">
-
-                    <input type="text" class="input search-input" placeholder="Поисковый запрос">
-                    <button type="submit" class="button circle submit-button">GO!</button>
-                </form>
-            </div>
-
-            <div class="item">
-                <div class="icon">
-                    <a href="https://market.yandex.ru" target="_blank">
-                        <img src="./images/ym.png" alt="ym">
-                    </a>
-                </div>
-
-                <form class="form single"
-                    data-href="https://market.yandex.ru" 
-                    data-base="/search?text=" 
-                    data-divider="+" 
-                    data-market="ym">
-
-                    <input type="text" class="input search-input" placeholder="Поисковый запрос">
-                    <button type="submit" class="button circle submit-button">GO!</button>
-                </form>
-            </div>
-
-            <div class="item">
-                <div class="icon">
-                    <a href="https://megamarket.ru" target="_blank">
-                        <img src="./images/megamarket.png" alt="megamarket">
-                    </a>
-                </div>
-
-                <form class="form single"
-                    data-href="https://megamarket.ru" 
-                    data-base="/catalog/?q=" 
-                    data-divider="%20" 
-                    data-market="megamarket">
-
-                    <input type="text" class="input search-input" id="allsearch" placeholder="Поисковый запрос">
-                    <button type="submit" class="button circle submit-button">GO!</button>
-                </form>
             </div>
         </div>
 
-        <h2>Искать по всем:</h2>
-
-        <form class="form global">
-            <input type="text" class="input" placeholder="Поисковый запрос">
-            <button class="button submit-button">GO!</button>
-        </form>
-
+        <script src="./buttonAdd.js"></script>
+        <script src="./buttonTotal.js"></script>
         <script src="./script.js"></script>
     </body>
 </html>

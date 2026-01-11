@@ -6,6 +6,10 @@ html {
     font-size: 16px;
 }
 
+body {
+    font-family: sans-serif
+}
+
 h2 {
     margin-bottom: 0.2rem;
 }
@@ -76,6 +80,21 @@ body > button {
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(hotpink 75%, pink 0);    
+}
+.progress-bar::before {
+    content: "75%";
 }
 
 
